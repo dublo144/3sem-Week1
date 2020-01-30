@@ -148,16 +148,7 @@ Temporary Items
 .apdisk
 
 ### Maven ###
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
-.flattened-pom.xml
+target/
 
 ### NetBeans ###
 **/nbproject/private/
@@ -168,6 +159,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+nb-configuration.xml
 
 ### Windows ###
 # Windows thumbnail cache files
