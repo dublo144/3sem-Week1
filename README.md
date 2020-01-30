@@ -1,4 +1,4 @@
-# Week 1 Review
+# Week 1 Review - Mads Brandt
 
 #### 28-01-2020 - JPA-intro-day2-exercises
 
