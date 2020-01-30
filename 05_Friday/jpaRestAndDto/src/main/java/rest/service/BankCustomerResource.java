@@ -1,8 +1,10 @@
 package rest.service;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import entities.BankCustomer;
 import facades.CustomerFacade;
+import java.util.List;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -35,5 +37,16 @@ public class BankCustomerResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String geCustomerById (@PathParam("id") Long id) {
         return gson.toJson(facade.getCustomerById(id));
+    }
+    
+    @POST
+    @Path("create")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void createCustomers(String json) {
+        List<BankCustomer> bankCustomers = gson.fromJson(json, new TypeToken<List<BankCustomer>>() {
+        }.getType());
+        for (BankCustomer bankCustomer : bankCustomers) {
+            facade.addCustomer(bankCustomer);
+        }
     }
 }
